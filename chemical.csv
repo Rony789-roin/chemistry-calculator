@@ -1,0 +1,298 @@
+Chemical Name,Formula,Molecular Weight,Equivalent Weight
+Hydrochloric Acid,HCl,36.46,36.46
+Sulfuric Acid,H₂SO₄,98.08,49.04
+Nitric Acid,HNO₃,63.01,63.01
+Phosphoric Acid,H₃PO₄,98.0,32.67
+Perchloric Acid,HClO₄,100.46,100.46
+Hydrofluoric Acid,HF,20.01,20.01
+Hydrobromic Acid,HBr,80.91,80.91
+Hydroiodic Acid,HI,127.91,127.91
+Periodic Acid,HIO₄,176.91,176.91
+Hypochlorous Acid,HClO,52.46,52.46
+Chlorous Acid,HClO₂,68.46,68.46
+Chloric Acid,HClO₃,84.46,84.46
+Bromic Acid,HBrO₃,128.91,128.91
+Iodic Acid,HIO₃,175.91,175.91
+Selenic Acid,H₂SeO₄,144.97,72.48
+Telluric Acid,H₆TeO₆,229.64,38.27
+Chromic Acid,H₂CrO₄,118.01,59.01
+Permanganic Acid,HMnO₄,119.93,119.93
+Pyrophosphoric Acid,H₄P₂O₇,177.98,44.49
+Metaphosphoric Acid,HPO₃,79.97,79.97
+Arsenic Acid,H₃AsO₄,141.94,47.31
+Antimonic Acid,H₃SbO₄,228.74,76.25
+Silicic Acid,H₄SiO₄,96.11,24.03
+Boric Acid,H₃BO₃,61.83,61.83
+Molybdic Acid,H₂MoO₄,161.94,80.97
+Tungstic Acid,H₂WO₄,249.84,124.92
+Hypophosphorous Acid,H₃PO₂,65.997,66.0
+Hypophosphoric Acid,H₄P₂O₆,161.98,40.49
+Dithionic Acid,H₂S₂O₆,162.18,81.09
+Sulfurous Acid,H₂SO₃,82.07,41.03
+Nitrous Acid,HNO₂,47.01,47.01
+Thiosulfuric Acid,H₂S₂O₃,114.13,57.06
+Carbonic Acid,H₂CO₃,62.03,31.02
+Hydrosulfuric Acid,H₂S,34.08,17.04
+Hydrocyanic Acid,HCN,27.03,27.03
+Isocyanic Acid,HNCO,43.03,43.03
+Fulminic Acid,HCNO,43.03,43.03
+Thiocyanic Acid,HSCN,59.09,59.09
+Seleninic Acid,H₂SeO₃,128.97,64.48
+Tellurous Acid,H₂TeO₃,229.64,114.82
+Vanadic Acid,H₃VO₄,149.92,49.97
+Niobic Acid,HNbO₃,181.89,181.89
+Titanic Acid,H₂TiO₃,97.87,48.94
+Manganous Acid,H₂MnO₃,152.97,76.48
+Germanic Acid,H₂GeO₃,142.62,71.31
+Stannic Acid,H₂SnO₃,150.74,75.37
+Plumbic Acid,H₂PbO₃,241.2,120.6
+Stannous Acid,H₂SnO₂,150.74,75.37
+Periodic Iodic Acid,HIO₃,175.91,175.91
+Metaphosphoric Acid,HPO₃,79.97,79.97
+Orthophosphoric Acid,H₃PO₄,98.0,32.67
+Pyrophosphorous Acid,H₄P₂O₅,161.98,40.49
+Triphosphoric Acid,H₅P₃O₁₀,275.97,55.19
+Tetraphosphoric Acid,H₆P₄O₁₃,353.97,59.0
+Condensed Phosphoric Acids,HₙPₙO₃ₙ₊₁,,
+Chlorosulfuric Acid,ClSO₃H,116.52,116.52
+Fluorosulfuric Acid,FSO₃H,100.07,100.07
+Disulfuric Acid,H₂S₂O₇,178.14,89.07
+Polysulfuric Acid,HₙS₂ₙO₆ₙ₊₁,,
+Aqua Regia,HNO₃+HCl,,
+Permanganate Acid,HMnO₄,119.93,119.93
+Permanganic Acid Esters,HMnO₄,119.93,119.93
+Hyperchlorite Acid,HClO,52.46,52.46
+Hypobromite Acid,HBrO,96.91,96.91
+Hypoiodite Acid,HIO,143.91,143.91
+Nitryl Fluoride,NO₂F,65.0,65.0
+Nitrosyl Fluoride,NOF,49.0,49.0
+Nitrosyl Chloride,NOCl,65.46,65.46
+Phosphorus Oxychloride,POCl₃,153.33,153.33
+Phosphorus Pentachloride,PCl₅,208.24,208.24
+Sulfur Trioxide,SO₃,80.07,80.07
+Dinitrogen Pentoxide,N₂O₅,108.01,108.01
+Chlorine Dioxide,ClO₂,67.45,67.45
+Bromine Pentafluoride,BrF₅,174.9,174.9
+Iodine Pentafluoride,IF₅,221.9,221.9
+Xenon Trioxide,XeO₃,179.29,179.29
+Perchloric Acid Monohydrate,HClO₄·H₂O,118.47,118.47
+Sulfuric Acid Monohydrate,H₂SO₄·H₂O,116.09,58.05
+Acidity Constants Comparison,Multiple,,
+Orthophosphoric Anhydride,P₂O₅,141.94,141.94
+Molybdenum Trioxide,MoO₃,143.94,143.94
+Tungsten Trioxide,WO₃,231.84,231.84
+Vanadium Pentoxide,V₂O₅,181.88,181.88
+Rhenium Trioxide,ReO₃,234.2,234.2
+Tantalum Pentoxide,Ta₂O₅,441.89,441.89
+Niobium Pentoxide,Nb₂O₅,265.81,265.81
+Manganese Trioxide,MnO₃,173.02,173.02
+Chromium Trioxide,CrO₃,99.99,99.99
+Ferric Oxide,Fe₂O₃,159.69,159.69
+Aluminum Oxide,Al₂O₃,101.96,101.96
+Silicon Dioxide,SiO₂,60.08,60.08
+Titanium Dioxide,TiO₂,79.87,79.87
+Acetic Acid,CH₃COOH,60.05,60.05
+Formic Acid,HCOOH,46.03,46.03
+Citric Acid,C₆H₈O₇,192.12,64.04
+Tartaric Acid,C₄H₆O₆,150.09,75.05
+Oxalic Acid Dihydrate,C₂H₂O₄·2H₂O,126.07,63.03
+Benzoic Acid,C₇H₆O₂,122.12,122.12
+Lactic Acid,C₃H₆O₃,90.08,90.08
+Propionic Acid,C₂H₅COOH,74.08,74.08
+Butyric Acid,C₃H₇COOH,88.11,88.11
+Valeric Acid,C₄H₉COOH,102.13,102.13
+Caproic Acid,C₅H₁₁COOH,116.16,116.16
+Enanthic Acid,C₆H₁₃COOH,130.19,130.19
+Caprylic Acid,C₇H₁₅COOH,144.21,144.21
+Pelargonic Acid,C₈H₁₇COOH,158.24,158.24
+Capric Acid,C₉H₁₉COOH,172.27,172.27
+Myristic Acid,C₁₃H₂₇COOH,228.37,228.37
+Palmitic Acid,C₁₅H₃₁COOH,256.42,256.42
+Stearic Acid,C₁₇H₃₅COOH,284.48,284.48
+Oleic Acid,C₁₇H₃₃COOH,282.46,282.46
+Linoleic Acid,C₁₈H₃₂O₂,280.24,280.24
+Linolenic Acid,C₁₈H₃₀O₂,278.43,278.43
+Oxalic Acid Anhydrous,C₂H₂O₄,90.04,45.02
+Malonic Acid,C₃H₄O₄,104.06,104.06
+Glutaric Acid,C₅H₈O₄,132.12,132.12
+Adipic Acid,C₆H₁₀O₄,146.14,146.14
+Pimelic Acid,C₇H₁₂O₄,160.17,160.17
+Suberic Acid,C₈H₁₄O₄,174.19,174.19
+Azelaic Acid,C₉H₁₆O₄,188.22,188.22
+Sebacic Acid,C₁₀H₁₈O₄,202.25,202.25
+Fumaric Acid,C₄H₄O₄,116.07,58.03
+Maleic Acid,C₄H₄O₄,116.07,58.03
+Itaconic Acid,C₅H₆O₄,130.1,130.1
+Citric Acid Monohydrate,C₆H₈O₇·H₂O,210.14,70.05
+Isocitric Acid,C₆H₈O₇,192.12,64.04
+Malic Acid,C₄H₆O₅,134.09,67.05
+D-Tartaric Acid,C₄H₆O₆,150.09,75.05
+L-Tartaric Acid,C₄H₆O₆,150.09,75.05
+DL-Tartaric Acid,C₄H₆O₆,150.09,75.05
+Salicylic Acid,C₇H₆O₃,138.12,138.12
+P-Hydroxybenzoic Acid,C₇H₆O₃,138.12,138.12
+M-Hydroxybenzoic Acid,C₇H₆O₃,138.12,138.12
+O-Hydroxybenzoic Acid,C₇H₆O₃,138.12,138.12
+Phthalic Acid,C₈H₆O₄,166.13,83.06
+Isophthalic Acid,C₈H₆O₄,166.13,83.06
+Terephthalic Acid,C₈H₆O₄,166.13,83.06
+Homophthalic Acid,C₉H₈O₄,180.16,90.08
+Trimellitic Acid,C₉H₈O₆,210.14,70.05
+Pyromellitic Acid,C₁₀H₆O₈,254.15,63.54
+Gallic Acid,C₇H₆O₅,170.12,170.12
+Tannic Acid,C₇₆H₅₂O₄₆,1701.2,1701.2
+Ascorbic Acid,C₆H₈O₆,176.12,88.06
+Dehydroascorbic Acid,C₆H₆O₆,174.11,87.06
+Uric Acid,C₅H₄N₄O₃,168.11,168.11
+Hippuric Acid,C₉H₉NO₃,179.17,179.17
+Vanillic Acid,C₈H₈O₄,168.15,168.15
+Ferulic Acid,C₁₀H₁₀O₄,194.18,194.18
+Caffeic Acid,C₉H₈O₄,180.16,180.16
+Sinapic Acid,C₁₁H₁₂O₅,224.21,224.21
+Cinnamic Acid,C₉H₈O₂,148.16,148.16
+Trans-Cinnamic Acid,C₉H₈O₂,148.16,148.16
+Mandelic Acid,C₈H₈O₃,152.15,152.15
+Phenylacetic Acid,C₈H₈O₂,136.15,136.15
+Phenylpropionic Acid,C₉H₁₀O₂,150.18,150.18
+Hydrocinnamic Acid,C₉H₁₀O₂,150.18,150.18
+Aconitic Acid,C₆H₆O₆,174.11,174.11
+Mucic Acid,C₆H₁₀O₈,210.14,210.14
+Glucaric Acid,C₆H₁₀O₈,210.14,210.14
+Sodium Hydroxide,NaOH,40.0,40.0
+Potassium Hydroxide,KOH,56.11,56.11
+Ammonium Hydroxide,NH₄OH,35.05,35.05
+Calcium Hydroxide,Ca(OH)₂,74.1,37.05
+Sodium Carbonate,Na₂CO₃,105.99,52.99
+Potassium Carbonate,K₂CO₃,138.21,69.11
+Lithium Hydroxide,LiOH,23.95,23.95
+Rubidium Hydroxide,RbOH,102.49,102.49
+Cesium Hydroxide,CsOH,149.91,149.91
+Barium Hydroxide,Ba(OH)₂,171.34,85.67
+Magnesium Hydroxide,Mg(OH)₂,58.32,29.16
+Strontium Hydroxide,Sr(OH)₂,121.63,60.81
+Lithium Carbonate,Li₂CO₃,73.89,36.95
+Sodium Bicarbonate,NaHCO₃,84.01,84.01
+Potassium Bicarbonate,KHCO₃,100.12,100.12
+Ammonium Carbonate,(NH₄)₂CO₃,96.09,48.05
+Ammonium Bicarbonate,NH₄HCO₃,79.06,79.06
+Calcium Carbonate,CaCO₃,100.09,50.05
+Barium Carbonate,BaCO₃,197.34,98.67
+Lead Carbonate,PbCO₃,267.2,133.6
+Zinc Carbonate,ZnCO₃,125.41,62.7
+Copper Carbonate,CuCO₃,123.55,61.77
+Iron Carbonate,FeCO₃,115.85,57.92
+Manganese Carbonate,MnCO₃,114.95,57.48
+Nickel Carbonate,NiCO₃,118.71,59.35
+Cobalt Carbonate,CoCO₃,118.94,59.47
+Cadmium Carbonate,CdCO₃,172.42,86.21
+Sodium Phosphate,Na₃PO₄,163.94,54.65
+Potassium Phosphate,K₃PO₄,212.27,70.76
+Sodium Sulfide,Na₂S,78.04,39.02
+Potassium Sulfide,K₂S,110.27,55.13
+Sodium Sulfite,Na₂SO₃,126.04,63.02
+Potassium Sulfite,K₂SO₃,158.26,79.13
+Sodium Thiosulfate,Na₂S₂O₃,158.11,79.06
+Potassium Thiosulfate,K₂S₂O₃,190.32,95.16
+Sodium Silicate,Na₂SiO₃,122.06,61.03
+Potassium Silicate,K₂SiO₃,154.28,77.14
+Sodium Borate,Na₂B(OH)₄,99.82,24.95
+Borax Pentahydrate,Na₂B₄O₅(OH)₄·8H₂O,381.37,95.34
+Sodium Hypochlorite,NaClO,74.44,74.44
+Potassium Hypochlorite,KClO,90.55,90.55
+Sodium Hypobromite,NaBrO,118.89,118.89
+Sodium Permanganate,NaMnO₄,141.93,141.93
+Sodium Percarbonate,2Na₂CO₃·3H₂O₂,156.04,78.02
+Sodium Peroxide,Na₂O₂,77.98,38.99
+Potassium Peroxide,K₂O₂,110.2,55.1
+Sodium Pyrophosphate,Na₄P₂O₇,265.9,265.9
+Potassium Pyrophosphate,K₄P₂O₇,330.34,330.34
+Tetrasodium EDTA,Na₄C₁₀H₁₂N₂O₈,380.18,380.18
+Trisodium EDTA,Na₃HC₁₀H₁₂N₂O₈,372.24,372.24
+Ethylenediamine,C₂H₈N₂,60.1,30.05
+Triethylenediamine,C₆H₁₆N₄,146.24,73.12
+Tetramethylenediamine,C₄H₁₂N₂,88.15,44.08
+Piperazine,C₄H₁₀N₂,86.14,86.14
+Morpholine,C₄H₉NO,87.12,87.12
+Pyrrolidine,C₄H₉N,71.12,71.12
+Piperidine,C₅H₁₁N,85.15,85.15
+Aniline,C₆H₇N,93.13,93.13
+Methylamine,CH₅N,31.06,31.06
+Ethylamine,C₂H₇N,45.08,45.08
+Propylamine,C₃H₉N,59.11,59.11
+Butylamine,C₄H₁₁N,73.14,73.14
+Pentylamine,C₅H₁₃N,87.16,87.16
+Hexylamine,C₆H₁₅N,101.19,101.19
+Diethylamine,C₄H₁₁N,73.14,73.14
+Triethylamine,C₆H₁₅N,101.19,101.19
+Diethanolamine,C₄H₁₁NO₂,105.14,105.14
+Triethanolamine,C₆H₁₅NO₃,149.19,149.19
+Pyridine,C₅H₅N,79.1,79.1
+Pyrrole,C₄H₅N,67.09,67.09
+Imidazole,C₃H₄N₂,68.08,68.08
+Benzimidazole,C₇H₆N₂,118.13,118.13
+Quinoline,C₉H₇N,129.16,129.16
+Isoquinoline,C₉H₇N,129.16,129.16
+Guanidine,CH₅N₃,59.07,59.07
+Tetraethylammonium Hydroxide,(C₂H₅)₄NOH,181.32,181.32
+Tetramethylammonium Hydroxide,(CH₃)₄NOH,107.19,107.19
+Tetrabutylammonium Hydroxide,(C₄H₉)₄NOH,259.45,259.45
+Ammonium Chloride,NH₄Cl,53.49,53.49
+Ammonium Carbonate,(NH₄)₂CO₃,96.09,48.05
+Ammonium Bicarbonate,NH₄HCO₃,79.06,79.06
+Ammonium Sulfate,(NH₄)₂SO₄,132.14,66.07
+Ammonium Nitrate,NH₄NO₃,80.04,80.04
+Ammonium Fluoride,NH₄F,37.04,37.04
+Ammonium Oxalate,(NH₄)₂C₂O₄,124.1,62.05
+Ammonium Acetate,CH₃COONH₄,77.08,77.08
+Ammonium Phosphate,(NH₄)₃PO₄,149.09,49.7
+Ammonium Thiocyanate,NH₄SCN,76.12,76.12
+Ammonium Bromide,NH₄Br,97.94,97.94
+Ammonium Iodide,NH₄I,144.94,144.94
+Ammonium Sulfide,(NH₄)₂S,68.14,34.07
+Ammonium Hydroxide,NH₄OH,35.05,35.05
+Ammonium Hydrogen Sulfate,NH₄HSO₄,115.11,115.11
+Ammonium Hydrogen Phosphate,(NH₄)₂HPO₄,132.06,66.03
+Ammonium Dihydrogen Phosphate,NH₄H₂PO₄,115.03,115.03
+Ammonium Hydrogen Carbonate,NH₄HCO₃,79.06,79.06
+Ammonium Citrate,(NH₄)₃C₆H₅O₇,243.21,81.07
+Ammonium Lactate,NH₄C₃H₅O₃,107.11,107.11
+Ammonium Glycolate,NH₄C₂H₃O₃,93.08,93.08
+Ammonium Tartrate,(NH₄)₂C₄H₄O₆,184.15,92.08
+Ammonium Malate,(NH₄)₂C₄H₄O₅,168.15,84.08
+Ammonium Succinate,(NH₄)₂C₄H₄O₄,152.15,76.08
+Ammonium Fumarate,(NH₄)₂C₄H₂O₄,150.13,75.06
+Ammonium Maleate,(NH₄)₂C₄H₂O₄,150.13,75.06
+Ammonium Methanesulfonate,NH₄CH₃SO₃,111.14,111.14
+Ammonium Ethanesulfonate,NH₄C₂H₅SO₃,125.17,125.17
+Ammonium Benzenesulfonate,NH₄C₆H₅SO₃,175.22,175.22
+Ammonium Nitrite,NH₄NO₂,64.04,64.04
+Ammonium Chlorate,NH₄ClO₃,101.49,101.49
+Ammonium Perchlorate,NH₄ClO₄,117.49,117.49
+Ammonium Permanganate,NH₄MnO₄,136.97,136.97
+Ammonium Dichromate,(NH₄)₂Cr₂O₇,252.07,126.03
+Ammonium Molybdate,(NH₄)₆Mo₇O₂₄·4H₂O,1235.86,1235.86
+Ammonium Tungstate,(NH₄)₁₀W₁₂O₄₁·4H₂O,2961.6,2961.6
+Ammonium Vanadate,NH₄VO₃,116.98,116.98
+Ammonium Antimonate,NH₄SbO₃,195.92,195.92
+Ammonium Zirconium Carbonate,(NH₄)₂Zr(CO₃)₃,367.02,183.51
+Ammonium Hexafluorosilicate,(NH₄)₂SiF₆,178.18,178.18
+Ammonium Hexafluorophosphate,NH₄PF₆,163.0,54.33
+Ammonium Hexafluoroaluminate,(NH₄)₃AlF₆,195.14,195.14
+Ammonium Chloride Double Salt,NH₄Cl·2NaCl,175.43,175.43
+Ammonium Sulfate Double Salt,3(NH₄)₂SO₄·K₂SO₄,771.98,385.99
+Ammonium Alum,NH₄Al(SO₄)₂·12H₂O,453.33,453.33
+Ammonium Ferrous Sulfate,NH₄Fe(SO₄)₂·12H₂O,492.27,246.13
+Ammonium Chromium Sulfate,(NH₄)Cr(SO₄)₂·12H₂O,478.37,239.19
+Ammonium Nickel Sulfate,(NH₄)₂Ni(SO₄)₂·6H₂O,394.95,197.47
+Ammonium Copper Sulfate,(NH₄)₂Cu(SO₄)₂·6H₂O,399.14,199.57
+Ammonium Zinc Sulfate,(NH₄)₂Zn(SO₄)₂·6H₂O,397.49,198.75
+Ammonium Manganese Sulfate,(NH₄)₂Mn(SO₄)₂·6H₂O,396.42,198.21
+Ammonium Cobalt Sulfate,(NH₄)₂Co(SO₄)₂·6H₂O,399.07,199.53
+Ammonium Cadmium Sulfate,(NH₄)₂Cd(SO₄)₂·6H₂O,450.5,225.25
+Ammonium Phosphomolybdate,(NH₄)₃PMo₁₂O₄₀,1876.5,1876.5
+Ammonium Phosphotungstate,(NH₄)₃PW₁₂O₄₀,2738.75,2738.75
+Ammonium Silicofluoride,(NH₄)₂SiF₆,178.18,178.18
+Ammonium Tetrafluoroborate,NH₄BF₄,104.84,104.84
+Ammonium Sulfate Persulfate Mixture,,,
+Ammonium Ferricyanide,(NH₄)₃[Fe(CN)₆],302.14,302.14
+Ammonium Ferrocyanide,(NH₄)₄[Fe(CN)₆]·3H₂O,422.12,422.12

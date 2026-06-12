@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemistry Laboratory Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1><i class="ti ti-flask" aria-hidden="true"></i> Chemistry Laboratory Calculator</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('dilution', this)">
+      <i class="ti ti-droplet" aria-hidden="true"></i> Dilution Calculator
+    </button>
+    <button class="tab-btn" onclick="switchTab('weight', this)">
+      <i class="ti ti-weight" aria-hidden="true"></i> Weight Calculator
+    </button>
+  </div>
+
+  <div id="tab-dilution" class="tab-panel active">
+    <p class="section-label">Calculation type</p>
+    <div class="radio-group">
+      <label><input type="radio" name="dtype" value="molarity" checked onchange="updateDilutionLabels()"> Molarity</label>
+      <label><input type="radio" name="dtype" value="normality" onchange="updateDilutionLabels()"> Normality</label>
+      <label><input type="radio" name="dtype" value="concentration" onchange="updateDilutionLabels()"> Concentration</label>
+    </div>
+
+    <div class="two-col">
+      <div class="field">
+        <label id="d-c1-label">Initial molarity (M)</label>
+        <input type="number" id="d-c1" placeholder="e.g. 10" min="0" step="any">
+      </div>
+      <div class="field">
+        <label id="d-c2-label">Final molarity (M)</label>
+        <input type="number" id="d-c2" placeholder="e.g. 1" min="0" step="any">
+      </div>
+    </div>
+
+    <div class="field" style="max-width: 260px;">
+      <label>Final volume (mL)</label>
+      <input type="number" id="d-v2" placeholder="e.g. 500" min="0" step="any">
+    </div>
+
+    <button class="calc-btn" onclick="calcDilution()">
+      <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Dilution
+    </button>
+
+    <div id="d-result" class="result-box empty">
+      <i class="ti ti-flask" aria-hidden="true"></i> Result will appear here
+    </div>
+
+    <div class="formula-box">
+      <p>Formula used</p>
+      <p>C₁V₁ = C₂V₂ &nbsp;→&nbsp; V₁ = (C₂ × V₂) / C₁</p>
+    </div>
+  </div>
+
+  <div id="tab-weight" class="tab-panel">
+    <p class="section-label">Calculation type</p>
+    <div class="radio-group">
+      <label><input type="radio" name="wtype" value="molarity" checked onchange="updateWeightLabels()"> Molarity</label>
+      <label><input type="radio" name="wtype" value="normality" onchange="updateWeightLabels()"> Normality</label>
+    </div>
+
+    <div class="field">
+      <label>Search chemical (name or formula)</label>
+      <div class="search-wrap">
+        <input type="text" id="chem-search" placeholder="e.g. Sodium hydroxide or NaOH"
+               oninput="searchChem()" onkeydown="searchKeydown(event)" autocomplete="off">
+        <div id="suggestions" class="suggestions" role="listbox"></div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="field">
+        <label id="w-mw-label">Molecular weight (g/mol)</label>
+        <input type="number" id="w-mw" placeholder="Auto-filled or enter manually" min="0" step="any">
+      </div>
+      <div class="field">
+        <label id="w-conc-label">Required molarity (M)</label>
+        <input type="number" id="w-conc" placeholder="e.g. 0.1" min="0" step="any">
+      </div>
+    </div>
+
+    <div class="field" style="max-width: 260px;">
+      <label>Required volume (mL)</label>
+      <input type="number" id="w-vol" placeholder="e.g. 1000" min="0" step="any">
+    </div>
+
+    <button class="calc-btn" onclick="calcWeight()">
+      <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Weight
+    </button>
+
+    <div id="w-result" class="result-box empty">
+      <i class="ti ti-scale" aria-hidden="true"></i> Result will appear here
+    </div>
+
+    <div class="formula-box">
+      <p>Formula used</p>
+      <p id="w-formula">mass = M × V(mL) × MW / 1000</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
