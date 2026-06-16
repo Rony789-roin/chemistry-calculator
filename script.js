@@ -43,14 +43,15 @@ function switchTab(id, btn) {
 function updateDilutionLabels() {
   const v = document.querySelector('input[name=dtype]:checked').value;
   if (v === 'molarity') {
-    document.getElementById('d-c1-label').textContent = 'Initial molarity (M)';
-    document.getElementById('d-c2-label').textContent = 'Final molarity (M)';
+    document.getElementById('d-c1-label').textContent = 'Initial molarity (M₁)';
+    document.getElementById('d-c2-label').textContent = 'Final molarity (M₂)';
+    
   } else if (v === 'normality') {
-    document.getElementById('d-c1-label').textContent = 'Initial normality (N)';
-    document.getElementById('d-c2-label').textContent = 'Final normality (N)';
+    document.getElementById('d-c1-label').textContent = 'Initial normality (N₁)';
+    document.getElementById('d-c2-label').textContent = 'Final normality (N₂)';
   } else {
-    document.getElementById('d-c1-label').textContent = 'Stock concentration';
-    document.getElementById('d-c2-label').textContent = 'Required concentration';
+    document.getElementById('d-c1-label').textContent = 'Stock concentration %';
+    document.getElementById('d-c2-label').textContent = 'Required concentration %';
   }
 }
 
