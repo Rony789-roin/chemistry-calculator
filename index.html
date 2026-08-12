@@ -5,107 +5,279 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chemistry Laboratory Calculator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <!-- PyScript CSS & JS for running Python matplotlib/scipy app in browser -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
-  <h1><i class="ti ti-flask" aria-hidden="true"></i> Chemistry Laboratory Calculator</h1>
+<div class="app-window">
+  <!-- Top Navigation Header Card -->
+  <div class="app-card">
+    <h1 class="main-title"><i class="ti ti-flask" aria-hidden="true"></i> Chemistry Laboratory Calculator</h1>
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('dilution', this)">
-      <i class="ti ti-droplet" aria-hidden="true"></i> Dilution Calculator
-    </button>
-    <button class="tab-btn" onclick="switchTab('weight', this)">
-      <i class="ti ti-weight" aria-hidden="true"></i> Weight Calculator
-    </button>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('dilution', this)">
+        <i class="ti ti-droplet" aria-hidden="true"></i> Dilution Calculator
+      </button>
+      <button class="tab-btn" onclick="switchTab('weight', this)">
+        <i class="ti ti-weight" aria-hidden="true"></i> Weight Calculator
+      </button>
+      <button class="tab-btn" onclick="switchTab('experiments', this)">
+        <i class="ti ti-info-circle" aria-hidden="true"></i> Physical Chemistry Experiments
+      </button>
+    </div>
+
+    <!-- TAB 1: DILUTION CALCULATOR -->
+    <div id="tab-dilution" class="tab-panel active">
+      <p class="section-label">Calculation type</p>
+      <div class="radio-group">
+        <label><input type="radio" name="dtype" value="molarity" checked onchange="updateDilutionLabels()"> Molarity</label>
+        <label><input type="radio" name="dtype" value="normality" onchange="updateDilutionLabels()"> Normality</label>
+        <label><input type="radio" name="dtype" value="concentration" onchange="updateDilutionLabels()"> Concentration</label>
+      </div>
+
+      <div class="two-col">
+        <div class="field">
+          <label id="d-c1-label">Initial molarity (M₁)</label>
+          <input type="number" id="d-c1" placeholder="e.g. 10" min="0" step="any">
+        </div>
+        <div class="field">
+          <label id="d-c2-label">Final molarity (M₂)</label>
+          <input type="number" id="d-c2" placeholder="e.g. 1" min="0" step="any">
+        </div>
+      </div>
+
+      <div class="field" style="max-width: 260px;">
+        <label>Final volume V₂ (mL)</label>
+        <input type="number" id="d-v2" placeholder="e.g. 500" min="0" step="any">
+      </div>
+
+      <button class="calc-btn" onclick="calcDilution()">
+        <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Dilution
+      </button>
+
+      <div id="d-result" class="result-box empty">
+        <i class="ti ti-flask" aria-hidden="true"></i> Result will appear here
+      </div>
+
+      <div class="formula-box">
+        <p>Formula used</p>
+        <p>C₁V₁ = C₂V₂ <br><br>V₁ = (C₂ × V₂) / C₁</p>
+      </div>
+    </div>
+
+    <!-- TAB 2: WEIGHT CALCULATOR -->
+    <div id="tab-weight" class="tab-panel">
+      <p class="section-label">Calculation type</p>
+      <div class="radio-group">
+        <label><input type="radio" name="wtype" value="molarity" checked onchange="updateWeightLabels()"> Molarity</label>
+        <label><input type="radio" name="wtype" value="normality" onchange="updateWeightLabels()"> Normality</label>
+      </div>
+
+      <div class="field">
+        <label>Search chemical (name or formula)</label>
+        <div class="search-wrap">
+          <input type="text" id="chem-search" placeholder="e.g. Sodium hydroxide or NaOH"
+                 oninput="searchChem()" onkeydown="searchKeydown(event)" autocomplete="off">
+          <div id="suggestions" class="suggestions" role="listbox"></div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="field">
+          <label id="w-mw-label">Molecular weight (g/mol)</label>
+          <input type="number" id="w-mw" placeholder="Auto-filled or enter manually" min="0" step="any">
+        </div>
+        <div class="field">
+          <label id="w-conc-label">Required molarity (M)</label>
+          <input type="number" id="w-conc" placeholder="e.g. 0.1" min="0" step="any">
+        </div>
+      </div>
+
+      <div class="field" style="max-width: 260px;">
+        <label>Required volume (mL)</label>
+        <input type="number" id="w-vol" placeholder="e.g. 1000" min="0" step="any">
+      </div>
+
+      <button class="calc-btn" onclick="calcWeight()">
+        <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Weight
+      </button>
+
+      <div id="w-result" class="result-box empty">
+        <i class="ti ti-scale" aria-hidden="true"></i> Result will appear here
+      </div>
+
+      <div class="formula-box">
+        <p>Formula used</p>
+        <p id="w-formula">Mass in Grams to be taken = M × V(mL) × MW / 1000</p>
+      </div>
+    </div>
+
+    <!-- TAB 3: PHYSICAL CHEMISTRY EXPERIMENTS (PORTAL CARDS) -->
+    <div id="tab-experiments" class="tab-panel">
+      <div class="experiments-grid">
+        <div class="exp-card" onclick="openTernaryModule()">
+          <div class="exp-thumb">
+            <i class="ti ti-triangle-square-circle"></i>
+            <span class="exp-badge">Web App</span>
+          </div>
+          <div class="exp-body">
+            <h3>Three Component System: Liquid Mixture</h3>
+            <p>Phase diagram calculations, binodal solubility curve plotting, and unknown mixture analysis.</p>
+            <button class="btn-card"><i class="ti ti-player-play"></i> Launch App</button>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-thumb thumb-2">
+            <i class="ti ti-droplet-half-2"></i>
+            <span class="exp-badge">LAB MODULE</span>
+          </div>
+          <div class="exp-body">
+            <h3>Viscosity by Ostwald Viscometer</h3>
+            <p>Determine relative and absolute viscosity of liquid mixtures using efflux time measurements.</p>
+            <button class="btn-card"><i class="ti ti-book"></i> View Module</button>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-thumb thumb-3">
+            <i class="ti ti-bolt"></i>
+            <span class="exp-badge">SIMULATOR</span>
+          </div>
+          <div class="exp-body">
+            <h3>Conductometric Titration</h3>
+            <p>Evaluate electrolytic conductance changes to locate equivalence points in acid-base reactions.</p>
+            <button class="btn-card"><i class="ti ti-book"></i> View Module</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="tab-dilution" class="tab-panel active">
-    <p class="section-label">Calculation type</p>
-    <div class="radio-group">
-      <label><input type="radio" name="dtype" value="molarity" checked onchange="updateDilutionLabels()"> Molarity</label>
-      <label><input type="radio" name="dtype" value="normality" onchange="updateDilutionLabels()"> Normality</label>
-      <label><input type="radio" name="dtype" value="concentration" onchange="updateDilutionLabels()"> Concentration</label>
+  <!-- THREE COMPONENT SYSTEM WORKSPACE (CONSTRAINED WIDTH & EXACT MATPLOTLIB EMBED) -->
+  <div id="ternary-workspace" class="ternary-workspace hidden">
+    <div class="workspace-header">
+      <button class="btn-back" onclick="closeTernaryModule()"><i class="ti ti-arrow-left"></i> Back to Portal</button>
+      <h2>Three Component System: Water–Nitrobenzene–Acetic Acid</h2>
     </div>
 
-    <div class="two-col">
-      <div class="field">
-        <label id="d-c1-label">Initial molarity (M₁)</label>
-        <input type="number" id="d-c1" placeholder="e.g. 10" min="0" step="any">
+    <div class="sub-tabs">
+      <button class="sub-tab-btn active" onclick="switchSubTab('calc', this)">Data Entry & Calculations</button>
+      <button class="sub-tab-btn" onclick="switchSubTab('plot', this)">Ternary Phase Diagram</button>
+    </div>
+
+    <!-- SUBTAB 1: DATA ENTRY & CALCULATIONS -->
+    <div id="subtab-calc" class="subtab-panel active">
+      <div class="py-grid-container">
+        <div class="py-panel" style="flex: 1;">
+          <div class="py-panel-header">Titration Observations (mL)</div>
+          <div class="table-scroll-wrap">
+            <table class="py-table">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Vol Water</th>
+                  <th>Vol Nitrobenzene</th>
+                  <th>Vol Acetic Acid</th>
+                </tr>
+              </thead>
+              <tbody id="obs-tbody"></tbody>
+            </table>
+          </div>
+          <button class="py-btn-small" onclick="addObsRow(0,0,0)">+ Add Row</button>
+        </div>
+
+        <div class="py-panel-column" style="flex: 1.2;">
+          <div class="py-panel">
+            <div class="py-panel-header">Unknown Mixture Analysis</div>
+            <div class="py-form-row">
+              <label>Empty Beaker Mass (W2) [g]:</label>
+              <input type="number" id="py-w2" value="30.6400" step="any" onchange="calculateTernaryData()">
+            </div>
+            <div class="py-form-row">
+              <label>Beaker + Mixture Mass (W1) [g]:</label>
+              <input type="number" id="py-w1" value="40.8400" step="any" onchange="calculateTernaryData()">
+            </div>
+            <div class="py-form-row">
+              <label>Titrated Nitrobenzene Vol (mL):</label>
+              <input type="number" id="py-vnb" value="2.6" step="any" onchange="calculateTernaryData()">
+            </div>
+            <button class="py-btn-action" onclick="calculateTernaryData()">Calculate Table Data</button>
+
+            <div id="py-unk-output" class="py-blue-output">
+              Titrated Unknown: 23.48% Nitrobenzene<br>
+              Original Mixture Composition (0% NB Baseline):<br>
+              • Water: 29.05%<br>
+              • Acetic Acid: 70.95%
+            </div>
+          </div>
+
+          <div class="py-panel" style="margin-top: 15px; flex-grow: 1;">
+            <div class="py-panel-header">Calculated Mass % Results</div>
+            <div class="table-scroll-wrap" style="max-height: 250px;">
+              <table class="py-table">
+                <thead>
+                  <tr>
+                    <th>Water %</th>
+                    <th>Nitrobenzene %</th>
+                    <th>Acetic Acid %</th>
+                  </tr>
+                </thead>
+                <tbody id="res-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="field">
-        <label id="d-c2-label">Final molarity (M₂)</label>
-        <input type="number" id="d-c2" placeholder="e.g. 1" min="0" step="any">
+    </div>
+
+    <!-- SUBTAB 2: TERNARY PHASE DIAGRAM -->
+    <div id="subtab-plot" class="subtab-panel">
+      <div class="py-panel" style="margin-bottom: 12px;">
+        <div class="py-panel-header">Graph Settings & Controls</div>
+        <div class="py-controls-row">
+          <label>Top Vertex:</label>
+          <select id="cb-top" onchange="drawTernaryPlot()"><option selected>Acetic Acid</option><option>Nitrobenzene</option><option>Water</option></select>
+
+          <label>Bottom-Left:</label>
+          <select id="cb-left" onchange="drawTernaryPlot()"><option>Acetic Acid</option><option selected>Nitrobenzene</option><option>Water</option></select>
+
+          <label>Bottom-Right:</label>
+          <select id="cb-right" onchange="drawTernaryPlot()"><option>Acetic Acid</option><option>Nitrobenzene</option><option selected>Water</option></select>
+
+          <label>Grid Step:</label>
+          <select id="cb-grid" onchange="drawTernaryPlot()"><option selected>1%</option><option>2%</option><option>5%</option><option>10%</option></select>
+
+          <button class="py-btn-control" onclick="drawTernaryPlot()">Generate Base Graph</button>
+          <button class="py-btn-control" id="btn-toggle-unk" onclick="toggleUnknownPoint()">Mark Unknown Point</button>
+          <button class="py-btn-control" id="btn-zoom" onclick="toggleZoomView()">🔍 Zoom to Curve Region</button>
+        </div>
       </div>
-    </div>
 
-    <div class="field" style="max-width: 260px;">
-      <label>Final volume V₂ (mL)</label>
-      <input type="number" id="d-v2" placeholder="e.g. 500" min="0" step="any">
-    </div>
+      <div class="py-grid-container-plot">
+        <div class="py-panel" style="width: 260px; flex-shrink: 0;">
+          <div class="py-panel-header">Mouse Curve Drawing</div>
+          <p class="py-italic-text">Click points on graph to joint them smoothly.</p>
+          <button class="py-btn-control full" onclick="undoPoint()">Undo Last Point</button>
+          <button class="py-btn-control full" onclick="resetMouseCurve()">Reset Mouse Curve</button>
+          <button class="py-btn-control full" onclick="autoConnectPoints()">Auto-Connect Sequence</button>
+          <div id="connected-count" class="py-bold-label">Connected Points: 0</div>
 
-    <button class="calc-btn" onclick="calcDilution()">
-      <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Dilution
-    </button>
+          <div style="margin-top: 10px;">
+            <div class="py-panel-header">Active Connected Points</div>
+            <select id="connected-list" size="12" class="py-listbox" onchange="onListSelect()"></select>
+          </div>
+        </div>
 
-    <div id="d-result" class="result-box empty">
-      <i class="ti ti-flask" aria-hidden="true"></i> Result will appear here
-    </div>
-
-    <div class="formula-box">
-      <p>Formula used</p>
-      <p>C₁V₁ = C₂V₂ <br>
-          <br>V₁ = (C₂ × V₂) / C₁</p>
+        <div class="py-panel canvas-container" style="flex-grow: 1;">
+          <canvas id="ternaryCanvas" width="900" height="700"></canvas>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div id="tab-weight" class="tab-panel">
-    <p class="section-label">Calculation type</p>
-    <div class="radio-group">
-      <label><input type="radio" name="wtype" value="molarity" checked onchange="updateWeightLabels()"> Molarity</label>
-      <label><input type="radio" name="wtype" value="normality" onchange="updateWeightLabels()"> Normality</label>
-    </div>
-
-    <div class="field">
-      <label>Search chemical (name or formula)</label>
-      <div class="search-wrap">
-        <input type="text" id="chem-search" placeholder="e.g. Sodium hydroxide or NaOH"
-               oninput="searchChem()" onkeydown="searchKeydown(event)" autocomplete="off">
-        <div id="suggestions" class="suggestions" role="listbox"></div>
-      </div>
-    </div>
-
-    <div class="two-col">
-      <div class="field">
-        <label id="w-mw-label">Molecular weight (g/mol)</label>
-        <input type="number" id="w-mw" placeholder="Auto-filled or enter manually" min="0" step="any">
-      </div>
-      <div class="field">
-        <label id="w-conc-label">Required molarity (M)</label>
-        <input type="number" id="w-conc" placeholder="e.g. 0.1" min="0" step="any">
-      </div>
-    </div>
-
-    <div class="field" style="max-width: 260px;">
-      <label>Required volume (mL)</label>
-      <input type="number" id="w-vol" placeholder="e.g. 1000" min="0" step="any">
-    </div>
-
-    <button class="calc-btn" onclick="calcWeight()">
-      <i class="ti ti-calculator" aria-hidden="true"></i> Calculate Weight
-    </button>
-
-    <div id="w-result" class="result-box empty">
-      <i class="ti ti-scale" aria-hidden="true"></i> Result will appear here
-    </div>
-
-    <div class="formula-box">
-      <p>Formula used</p>
-      <p id="w-formula">Mass in Grams to be taken  = M × V(mL) × MW / 1000</p>
-    </div>
-  </div>
-
 </div>
 
 <script src="script.js"></script>
